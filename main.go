@@ -25,9 +25,15 @@ func fileHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	port := "8080"
+
 	http.HandleFunc("/", indexHandler)
 	http.HandleFunc("/templates/", fileHandler)
 	http.HandleFunc("/static/", fileHandler)
 
-	http.ListenAndServe(":8080", nil)
+	log.Println(fmt.Sprintf("INFO - Starting web server on port %s", port))
+	e := http.ListenAndServe(fmt.Sprintf(":%s", port), nil)
+	if (e != nil) {
+		log.Println(fmt.Sprintf("ERROR - %s", e))
+	}
 }
