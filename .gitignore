@@ -1,2 +1,4 @@
-tcgrng_web
-_vendor
+node_modules
+dist
+.tmp
+bower_components
