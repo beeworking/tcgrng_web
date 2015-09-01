@@ -169,8 +169,8 @@ module.exports = function (grunt) {
       glob_to_multiple: {
         expand: true,
         flatten: true,
-        cwd: '<%= config.app %>/scripts',
-        src: ['*.coffee'],
+        cwd: '<%= config.app %>/scripts/',
+        src: ['**/*.coffee'],
         dest: '.tmp/scripts',
         ext: '.js'
       }
@@ -187,8 +187,8 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
+          cwd: '<%= config.app %>/styles/',
+          src: ['**/*.{scss,sass}'],
           dest: '.tmp/styles',
           ext: '.css'
         }]
@@ -196,8 +196,8 @@ module.exports = function (grunt) {
       server: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
+          cwd: '<%= config.app %>/styles/',
+          src: ['**/*.{scss,sass}'],
           dest: '.tmp/styles',
           ext: '.css'
         }]
