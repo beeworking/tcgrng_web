@@ -5,8 +5,8 @@ class Game.Engine
     card_w = 120
     card_h = 150
     @game = new Phaser.Game(
-      card_w*10,
-      card_h*4,
+      card_w * 10,
+      card_h * 4,
       Phaser.AUTO,
       'game-view',
       {
