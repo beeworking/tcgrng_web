@@ -2,9 +2,11 @@ window.Game = { }
 
 class Game.Engine
   constructor: () ->
+    card_w = 120
+    card_h = 150
     @game = new Phaser.Game(
-      800,
-      600,
+      card_w*10,
+      card_h*4,
       Phaser.AUTO,
       'game-view',
       {
