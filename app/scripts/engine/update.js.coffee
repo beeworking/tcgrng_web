@@ -1,1 +1,1 @@
-@update = ->
+Game.update = ->
